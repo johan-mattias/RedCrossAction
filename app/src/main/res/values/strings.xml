@@ -11,4 +11,6 @@
     <string name="required_skills">Skills required to the event</string>
     <string name="hint_text">anything extra we should know about</string>
     <string name="report_event">Report Event</string>
+    <string name="info_is_checked">Info is Checked</string>
+    <string name="update_status">Update Status</string>
 </resources>

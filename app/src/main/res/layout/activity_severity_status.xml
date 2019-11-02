@@ -8,7 +8,6 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/chooseBtn"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +31,7 @@
 
 
         <RadioGroup
-            android:id="@+id/myRadioGroup"
+            android:id="@+id/severityLevelRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
@@ -128,14 +127,15 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="25dp" />
+                android:paddingLeft="25dp"
+                android:id="@+id/comments"/>
 
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/chooseBtn"
+        android:id="@+id/reportBtn"
         android:layout_width="match_parent"
         android:layout_height="59dp"
 
