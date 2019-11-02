@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1097932692758",
+    "firebase_url": "https://redcrossaction.firebaseio.com",
+    "project_id": "redcrossaction",
+    "storage_bucket": "redcrossaction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097932692758:android:b71982ad0daeed9fbf8437",
+        "android_client_info": {
+          "package_name": "com.mjukisarna.redcrossaction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097932692758-0hnl5rej3nf372q21i759js3p6v6kfro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzo8jTOkBaIX8rlRqFqr25URnxXC6kk8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097932692758-0hnl5rej3nf372q21i759js3p6v6kfro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
