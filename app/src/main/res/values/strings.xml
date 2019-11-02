@@ -11,4 +11,6 @@
     <string name="required_skills">Skills required to the event</string>
     <string name="hint_text">anything extra we should know about</string>
     <string name="report_event">Report Event</string>
+    <string name="fire">Fire</string>
+    <string name="Flood">flood</string>
 </resources>
