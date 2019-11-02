@@ -1,5 +1,6 @@
 package se.mjukis.redcrossaction
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.android.volley.Response
@@ -31,6 +32,13 @@ class MainActivity : AppCompatActivity() {
             queue.add(stringRequest)
 
 
+        var eventType = button.text.toString()
+
+        val severityStatusPage = Intent(this, SeverityStatusActivity::class.java)
+        button.setOnClickListener() {
+            severityStatusPage.putExtra(IntentRelatedInfo.EVENT_TYPE.toString(), eventType)
+            startActivity(severityStatusPage)
         }
+
     }
 }
