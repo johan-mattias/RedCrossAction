@@ -3,6 +3,7 @@
     package="se.mjukis.redcrossaction">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,16 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
-        <activity android:name=".Main2Activity"></activity>
         <activity android:name=".SeverityStatusActivity" />
-        <activity android:name=".AvailabilityActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".NewsFeedActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

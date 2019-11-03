@@ -14,5 +14,5 @@
     <string name="fire">Fire</string>
     <string name="Flood">flood</string>
     <string name="info_is_checked">Info is Checked</string>
-    <string name="update_status">Update Status</string>
+    <string name="verify_event">Verify Event</string>
 </resources>

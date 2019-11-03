@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,9 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun chooseEvent(view: View?){
+    fun chooseEvent(view: View){
         val severityStatusPage = Intent(this, SeverityStatusActivity::class.java)
-        var eventType = (view as Button).text.toString()
+        var eventType = view.context.resources.getResourceEntryName(view.id)
             severityStatusPage.putExtra(IntentRelatedInfo.EVENT_TYPE.toString(), eventType)
             startActivity(severityStatusPage)
 
