@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_severity_status.*
@@ -21,21 +20,24 @@ class SeverityStatusActivity : AppCompatActivity() {
 
         reportBtn.setOnClickListener {
             val severityLevelId = severityLevelRadioGroup.checkedRadioButtonId
-            val severityValue = resources.getResourceEntryName(severityLevelId)
-            val editionalInfo = comments.text.toString()
 
-            reportIncidentUpdate()
+            var reportInfo = JSONObject()
+            reportInfo.put("type", intent.getStringExtra(EVENT_TYPE))
+            reportInfo.put("severityLevel", resources.getResourceEntryName(severityLevelId))
+            reportInfo.put("editionalInfo", comments.text.toString())
+
+            reportIncidentUpdate(reportInfo)
         }
     }
 
-    private fun reportIncidentUpdate() {
+    private fun reportIncidentUpdate(reportInfo: JSONObject?) {
         val queue = Volley.newRequestQueue(this)
         val url = "$BASE_URI/api/reportIncident"
 
-        val stringRequest =  StringRequest(
-            Request.Method.POST, url,
+        val stringRequest =  JsonObjectRequest(
+            Request.Method.POST, url, reportInfo,
 
-            Response.Listener<String> { response ->
+            Response.Listener<JSONObject> { response ->
                 textView.text = "Response is: ${response}"
             },
             Response.ErrorListener { textView.text = "That didn't work!" })

@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     fun chooseEvent(view: View){
         val severityStatusPage = Intent(this, SeverityStatusActivity::class.java)
         var eventType = view.context.resources.getResourceEntryName(view.id)
-            severityStatusPage.putExtra(IntentRelatedInfo.EVENT_TYPE.toString(), eventType)
+            severityStatusPage.putExtra(EVENT_TYPE, eventType)
             startActivity(severityStatusPage)
 
     }

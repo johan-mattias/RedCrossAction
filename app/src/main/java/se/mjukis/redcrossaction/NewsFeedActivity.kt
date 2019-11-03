@@ -10,10 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.VolleyError
-import com.android.volley.toolbox.HttpHeaderParser
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_news_feed.*
@@ -35,12 +35,10 @@ class NewsFeedActivity : AppCompatActivity() {
     }
 
     fun getNews() {
-        Toast.makeText(this, "trying to get news ", Toast.LENGTH_SHORT).show()
         val url = "$BASE_URI/api/news"
         val request = JsonObjectRequest(
             Request.Method.GET, url, null,
             Response.Listener<JSONObject> { response ->
-                Toast.makeText(this, "got response", Toast.LENGTH_SHORT).show()
                 val news = response
                     .getJSONArray("news")
 
@@ -49,6 +47,7 @@ class NewsFeedActivity : AppCompatActivity() {
             Response.ErrorListener { error: VolleyError ->
                 Toast.makeText(this, "Error: $error", Toast.LENGTH_SHORT).show()
             })
+        request.retryPolicy = DefaultRetryPolicy(10000, 5, 1f)
         val queue = Volley.newRequestQueue(this)
         queue.add(request)
     }

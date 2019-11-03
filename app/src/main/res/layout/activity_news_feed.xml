@@ -16,18 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             android:scrollbars="vertical"
-            tools:listitem="@layout/news_item"/>
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            tools:listitem="@layout/news_item" />
     </LinearLayout>
 
     <Button
         android:id="@+id/updateNewsStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:fontFamily="@font/roboto_bold"
         android:onClick="updateNewsStatus"
-        android:paddingLeft="25dp"
+        android:padding="21dp"
         android:text="@string/verify_event"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

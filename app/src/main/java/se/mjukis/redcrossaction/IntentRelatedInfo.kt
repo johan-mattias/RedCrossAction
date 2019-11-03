@@ -1,6 +1,3 @@
 package se.mjukis.redcrossaction
 
-enum class IntentRelatedInfo {
-    EVENT_TYPE
-
-}
+val EVENT_TYPE = "EVENT_TYPE"
