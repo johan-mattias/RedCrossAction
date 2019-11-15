@@ -18,6 +18,10 @@ During the autemn Open Hack 2019 team Mjukisarna has been hacking the [Challenge
 3) The volonteer can go the place and either report "all is calm" or report an incident to the server. Volonteer can select type of event, indicate severity level, probable resources required and any comments the will be sent to the administrator who will send more notifications to other volonteers. 
 (*All parts of reporting an incident are available in this repo*)
 
+<p align="center">
+  <img width="250" src="https://user-images.githubusercontent.com/25244078/68983043-7e01da80-0809-11ea-9e2a-a06d1d0a322b.jpg">
+</p>
+
 4) All reported incidents are received in the server ( *During the hackaton our team has implemented a python based rest app and set up a heroku server so that we could test our parts together. This part can be found [here](https://github.com/eddiemon/rc-action-backend)*)
 
 5) All insidents will be shown on the map so that the admin will have a good overview of all incidents and amount of volonteers involved. (*this part is still under development*)
