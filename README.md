@@ -2,7 +2,7 @@
 
 During the autemn Open Hack 2019 team Mjukisarna has been hacking the [Challenge from Swedish Red Cross.](https://www.luminpdf.com/viewer/5dcf2927a562620019dd83f6)
 
-#### In brief, we've created a base for an automated system for social media monitoring and reports managing. 
+#### In brief, we've created a base for an automated system for social media monitoring and reports managing. Server sides collects intresting for Red Cross mentions in the media, sends them to volonteers, who are able to check information and report incidents. All reports are gatherd in the admin center, were next steps could be organized.
 
 ### *How it works?*
 
